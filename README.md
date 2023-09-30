@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
- Car Rental
+MERN Stack Cart Project
   <br>
 </h1>
 
