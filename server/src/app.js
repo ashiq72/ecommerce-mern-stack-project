@@ -21,7 +21,7 @@ const limiter = rateLimit({
 app.get("/", (req, res) => {
   res.send("Home route");
 });
-app.use("/api/user", userRouter);
+app.use("/api/users", userRouter);
 app.use("/api/seed", seedRouter);
 
 // Client error handling : When access not create route
