@@ -33,6 +33,7 @@ Comming soon...
   - xss-clean :
   - express-rate-limit : Basic rate-limiting middleware for Express API calls.
   - bcryptjs : It's use for scecure password.
+  - createError : It's make custom error.
 
 ## How To Use:
 
