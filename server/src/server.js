@@ -1,7 +1,6 @@
-const express = require("express");
-const app = express();
-const PORT = 5000;
+const app = require("./app");
+const { serverPort } = require("./secret");
 
-app.listen(PORT, () => {
+app.listen(serverPort, () => {
   console.log("Server is running");
 });

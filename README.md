@@ -27,7 +27,12 @@ Comming soon...
 - All Node package manager:
   - express : It's used for express server.
   - nodemon : Automatically restarting the node application when file changes in the directory are detected.
-  - morgan : component library for Tailwind CSS
+  - morgan : Write log line on request instead of response.
+  - http-errors : Create custom error
+  - body-parser : 3rd party middleware, it's instead of express middleware.
+  - xss-clean :
+  - express-rate-limit : Basic rate-limiting middleware for Express API calls.
+  - bcryptjs : It's use for scecure password.
 
 ## How To Use:
 
