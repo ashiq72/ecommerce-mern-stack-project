@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const rateLimit = require("express-rate-limit");
 const userRouter = require("./routers/user.router");
 const seedRouter = require("./routers/seed.router");
+const { errorResponse } = require("./controllers/response.controller");
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
@@ -20,15 +21,18 @@ const limiter = rateLimit({
 app.get("/", (req, res) => {
   res.send("Home route");
 });
-
-// Client error handling : When access not create route
 app.use("/api/user", userRouter);
 app.use("/api/seed", seedRouter);
 
+// Client error handling : When access not create route
+app.use((req, res, next) => {
+  next(createError(404, "route not found"));
+});
+
 // Server error handling: Finally error/last error
 app.use((err, req, res, next) => {
-  return res.status(err.status || 500).json({
-    success: false,
+  return errorResponse(res, {
+    statusCode: err.status,
     message: err.message,
   });
 });
