@@ -4,8 +4,8 @@ const app = express();
 const createError = require("http-errors");
 const bodyParser = require("body-parser");
 const rateLimit = require("express-rate-limit");
-const userRouter = require("./routers/user.rotuer");
-// import { rateLimit } from "express-rate-limit";
+const userRouter = require("./routers/user.router");
+const seedRouter = require("./routers/seed.router");
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
@@ -23,6 +23,7 @@ app.get("/", (req, res) => {
 
 // Client error handling : When access not create route
 app.use("/api/user", userRouter);
+app.use("/api/seed", seedRouter);
 
 // Server error handling: Finally error/last error
 app.use((err, req, res, next) => {

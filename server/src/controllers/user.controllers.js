@@ -1,6 +1,12 @@
-const getUser = (req, res, next) => {
+const User = require("../models/user.model");
+
+const getUser = async (req, res, next) => {
   try {
-    res.send("product route ");
+    const users = await User.find();
+    res.status(200).send({
+      message: "users ware returned",
+      users,
+    });
   } catch (error) {
     next(error);
   }
