@@ -65,7 +65,6 @@ Car Rental is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning,
 This software uses the following open source packages:
 
 - [Next Js - App Router](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Support:
 
